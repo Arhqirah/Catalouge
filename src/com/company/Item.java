@@ -9,7 +9,7 @@ public class Item {
     public Item(String category, String description) {
         this.category = category;
         this.description = description;
-        isAvailable = false;
+        isAvailable = true;
     }
 
     public String getDescription() {
@@ -25,13 +25,14 @@ public class Item {
     }
 
     public void makeAvailable() {
-            isAvailable = true;
+          isAvailable = true;
+
         }
     public void makeUnavailable() {
         isAvailable = false;
     }
 
     public String toString () {
-        return category + " " + description + " " + isAvailable;
+        return category + " " + description + " " + isAvailable + "\n";
     }
 }

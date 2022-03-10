@@ -19,8 +19,8 @@ public class Catalogue {
     }
 
     public Item[] getAvailableItems() {
-        Item[] availables = new Item[items.length];
-        for(int i = 0; i < items.length; i++) {
+        Item[] availables = new Item[counter];
+        for(int i = 0; i < counter; i++) {
             Item temp = items[i];
             if (temp != null && temp.showAvailability()) {
                 availables[i] = temp;
@@ -30,7 +30,7 @@ public class Catalogue {
     }
 
     public Item findItem(String searchName) {
-        for(int i = 0; i < items.length; i++) {
+        for(int i = 0; i < counter; i++) {
             Item temp = items[i];
             if (temp != null && temp.getDescription().equals(searchName)) {
                 return temp;
