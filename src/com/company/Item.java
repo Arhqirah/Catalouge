@@ -6,10 +6,11 @@ public class Item {
     private String description;
     private boolean isAvailable;
 
+
     public Item(String category, String description) {
         this.category = category;
         this.description = description;
-        isAvailable = true;
+        this.isAvailable = true;
     }
 
     public String getDescription() {
@@ -21,14 +22,21 @@ public class Item {
     }
 
     public void makeAvailable() {
-          isAvailable = true;
+        isAvailable = true;
 
-        }
+    }
+
     public void makeUnavailable() {
         isAvailable = false;
     }
 
-    public String toString () {
-        return category + " " + description + " " + isAvailable + "\n";
+
+    @Override
+    public String toString() {
+        if (!isAvailable) {
+            return "Category: " + category + "\nDescription: " + description + "\nLedig?: " + isAvailable + "\n";
+        } else {
+            return "Category: " + category + "\nDescription: " + description + "\nLedig?: " + isAvailable + "\n";
+        }
     }
 }

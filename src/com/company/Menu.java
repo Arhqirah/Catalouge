@@ -39,7 +39,7 @@ public class Menu {
             System.out.println("3. Opret ting til udlån");
             System.out.println("4. Lån ting");
             System.out.println("5. Aflever ting");
-            System.out.println("0. Exit");
+            System.out.println("0. Exit\n");
 
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
